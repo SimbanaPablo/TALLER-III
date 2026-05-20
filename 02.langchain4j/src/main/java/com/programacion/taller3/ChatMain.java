@@ -8,8 +8,8 @@ public class ChatMain {
     public static ChatModel chatModel() {
         return OpenAiChatModel.builder()
                 .apiKey("llama-key.cpp")
-                .modelName("llama-3.2-1b-instruct-q8_0.gguf")
-                //.modelName("gemma-4-E4B-it-Q4_K_S.gguf")
+//                .modelName("llama-3.2-1b-instruct-q8_0.gguf")
+                .modelName("gemma-4-E4B-it-Q4_K_S.gguf")
                 .baseUrl("http://localhost:8080")
                 .logRequests(true)
                 .logResponses(true)
@@ -17,7 +17,7 @@ public class ChatMain {
     }
     //Modelo Groq
     static String base_url="https://api.groq.com/openai/v1";
-    static String key = "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";
+    static String key = "gsk_XikQdfGvePeIi6LdKxBtWGdyb3FYM1suFIhoO8EcfRfgwG1Inv4hgsk_XikQdfGvePeIi6LdKxBtWGdyb3FYM1suFIhoO8EcfRfgwG1Inv4h";
     static String model = "llama-3.1-8b-instant";
 
     public static ChatModel chatModelGroq() {
