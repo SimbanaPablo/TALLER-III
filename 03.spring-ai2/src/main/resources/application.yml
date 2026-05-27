@@ -1,0 +1,50 @@
+##        GROQ
+#server:
+#  port: 8090
+#
+#app:
+#  key: xyz
+#  aimodel: llama-3.1-8b-instant
+#  url: https://api.groq.com/openai/v1
+#
+#spring:
+#  ai:
+#    openai:
+#      api-key: ${app.key}
+#      base-url: ${app.url}
+#      chat:
+#        model: ${app.aimodel}
+############################################
+#        Local gemma-4
+#server:
+#  port: 8090
+#
+#app:
+#  key: xyz
+#  aimodel: gemma-4-E4B-it-Q4_K_S
+#  url: http://localhost:8080
+#
+#spring:
+#  ai:
+#    openai:
+#      api-key: ${app.key}
+#      base-url: ${app.url}
+#      chat:
+#        model: ${app.aimodel}
+############################################
+#        Local llama3.2
+server:
+  port: 8090
+
+app:
+  key: xyz
+  aimodel: llama-3.2-1b-instruct-q8_0
+  url: http://localhost:8080
+
+spring:
+  ai:
+    openai:
+      api-key: ${app.key}
+      base-url: ${app.url}
+      chat:
+        model: ${app.aimodel}
