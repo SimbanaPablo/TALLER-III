@@ -14,7 +14,7 @@ class Herramientas {
     String obtenerFechaHora(){
         return LocalDateTime.now().toString();
     }
-    @Tool("Obtiene la fecha y hora actual")
+    @Tool("Cual es el usuario actual")
     String obtenerNomnreUsuario(){
         return String.format("El nombre del usuario de este equipo es ADMIN");
     }
