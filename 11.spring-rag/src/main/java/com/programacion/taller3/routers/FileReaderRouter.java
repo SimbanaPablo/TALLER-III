@@ -16,7 +16,7 @@ public class FileReaderRouter extends RouteBuilder {
 
         from(from)
                 .log("Archivo leido: ${header.CamelFileName}")
-                .bean("fileProcessor")
+                .bean("fileProcessor", "procesar")
                 .bean("transformerProcessor")
                 .bean("embeddingProcessor")
         //.to( "direct:processFile");

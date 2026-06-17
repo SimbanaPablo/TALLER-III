@@ -1,11 +1,8 @@
 plugins {
-    java
+    id("java")
     id("org.springframework.boot") version "4.0.6"
     id("io.spring.dependency-management") version "1.1.7"
 }
-
-group = "org.example"
-version = "unespecified"
 
 java {
     toolchain {
@@ -20,7 +17,7 @@ repositories {
 extra["springAiVersion"] = "2.0.0"
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-webmvc")
+    implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.ai:spring-ai-starter-model-openai")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     // Readers
@@ -38,6 +35,11 @@ dependencies {
     implementation("org.apache.camel.springboot:camel-spring-boot-starter:4.20.0")
     implementation("org.apache.camel.springboot:camel-file-starter:4.20.0")
 
+    //Docker compose
+    implementation("org.springframework.boot:spring-boot-docker-compose")
+
+    // Source: https://mvnrepository.com/artifact/com.microsoft.onnxruntime/onnxruntime_gpu
+    //implementation("com.microsoft.onnxruntime:onnxruntime_gpu:1.19.+")
 }
 
 dependencyManagement {
