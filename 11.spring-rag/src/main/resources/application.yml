@@ -3,7 +3,8 @@ server:
 
 app:
   key: xyz
-  aimodel: all-minilm-l6-v2-q8_0
+  #all-minilm-l6-v2-q8_0.gguf
+  aimodel: nomic-embed-text-v1.5.Q8_0
   url: http://localhost:8080/v1
 
 spring:

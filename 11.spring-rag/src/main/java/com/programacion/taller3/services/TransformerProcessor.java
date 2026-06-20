@@ -11,7 +11,7 @@ public class TransformerProcessor {
 
     public List<Document> procesar(List<Document> documents) {
         TokenTextSplitter splitter = TokenTextSplitter.builder()
-                .withChunkSize(350)
+                .withChunkSize(800)
                 .build();
 
         List<Document> splitted = splitter.split(documents);
