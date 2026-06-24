@@ -30,6 +30,7 @@ dependencies {
 
     //Vector Store
     implementation("org.springframework.ai:spring-ai-starter-vector-store-qdrant")
+    implementation("org.springframework.ai:spring-ai-vector-store-advisor")
 
     //EIPs
     implementation("org.apache.camel.springboot:camel-spring-boot-starter:4.20.0")
@@ -38,12 +39,16 @@ dependencies {
     //Docker compose
     implementation("org.springframework.boot:spring-boot-docker-compose")
 
-    // Source: https://mvnrepository.com/artifact/com.microsoft.onnxruntime/onnxruntime_gpu
-    //implementation("com.microsoft.onnxruntime:onnxruntime_gpu:1.19.+")
+    //Source: https://mvnrepository.com/artifact/com.microsoft.onnxruntime/onnxruntime_gpu
+    implementation("com.microsoft.onnxruntime:onnxruntime_gpu:1.19.+")
 }
 
 dependencyManagement {
     imports {
         mavenBom("org.springframework.ai:spring-ai-bom:${property("springAiVersion")}")
     }
+}
+
+configurations.all {
+    exclude(group = "ai.djl.pytorch")
 }

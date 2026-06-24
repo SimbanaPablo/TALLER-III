@@ -4,8 +4,11 @@ server:
 app:
   key: xyz
   #all-minilm-l6-v2-q8_0.gguf
-  aimodel: nomic-embed-text-v1.5.Q8_0
-  url: http://localhost:8080/v1
+  #nomic-embed-text-v1.5.Q8_0
+  aimodel: llama-3.1-8b-instant
+#  url: http://localhost:8080/v1
+#  url: http://localhost:8081/v1
+  url: https://api.groq.com/openai/v1
 
 spring:
   docker:
@@ -14,7 +17,8 @@ spring:
       file: 11.spring-rag/docker-compose.yml
   ai:
     model:
-      embedding: openai
+#      embedding: openai
+      embedding: transformers
     embedding:
       transformer:
         onnx:
