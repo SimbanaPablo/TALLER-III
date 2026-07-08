@@ -6,4 +6,6 @@ services:
       - '6333:6333'
       - '6334:6334'
     volumes:
-      - /home/qdrant_storage:/qdrant/storage
+      - C:/home/qdrant_storage:/qdrant/storage
+#     Local, en la reiz del proyecto
+#      - ./qdrant_data:/qdrant/storage

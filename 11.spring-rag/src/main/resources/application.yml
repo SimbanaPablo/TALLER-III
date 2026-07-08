@@ -17,7 +17,7 @@ spring:
       file: 11.spring-rag/docker-compose.yml
   ai:
     model:
-#      embedding: openai
+#      embedding: openai transformers
       embedding: transformers
     embedding:
       transformer:
