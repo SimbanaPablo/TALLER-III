@@ -8,8 +8,13 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/00.revision" />
             <option value="$PROJECT_DIR$/01.embeddings" />
             <option value="$PROJECT_DIR$/02.langchain4j" />
+            <option value="$PROJECT_DIR$/03.spring-ai2" />
+            <option value="$PROJECT_DIR$/10.spring-prompt" />
+            <option value="$PROJECT_DIR$/11.spring-rag" />
+            <option value="$PROJECT_DIR$/12.spring-mcp-client" />
           </set>
         </option>
         <option name="myGradleHome" value="" />
